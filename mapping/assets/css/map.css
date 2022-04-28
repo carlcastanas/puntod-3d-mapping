@@ -1,0 +1,349 @@
+
+#map {
+  width: 100%;
+  height: 80vh;
+  background-color: white;
+}
+
+.errMsg {
+  font-size: 1.1em;
+  color: red;
+  font-weight: bold;
+}
+
+
+.info h3 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.info {
+padding: 6px 8px;
+font: 14px/16px Arial, Helvetica, sans-serif;
+background: white;
+background: rgba(255,255,255,0.8);
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+border-radius: 5px;
+}
+.legend {
+background-color: “black”;
+line-height: 25px;
+color: #555;
+width: auto;
+}
+.legend i {
+width: 18px;
+height: 18px;
+float: left;
+margin-right: 8px;
+opacity: 0.7;
+}
+
+
+ 
+.marker-pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  background: #c30b82;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+}
+
+.marker-pin::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin: 3px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+ }
+
+ 
+.custom-div-icon i {
+   position: absolute;
+   width: 25px;
+   font-size: 18px;
+   left: 0;
+   right: 0;
+   margin: 10px auto;
+   text-align: center;
+   color: #000;
+}
+
+.custom-div-icon i.awesome {
+    margin: 12px auto;
+    font-size: 12px;
+    color: #000;
+ }
+
+.custom-div-icon img {
+   position: absolute;
+   width: 19px;
+   height: 17px;
+   left: 0;
+   right: 0;
+   margin: 10px auto;
+   text-align: center;
+}
+
+#crosshair-button {
+  position: absolute;
+
+}
+
+
+.leaflet-container.crosshair-cursor-enabled {
+  cursor: crosshair;
+
+}
+
+
+.state-remove-markers,
+.state-add-markers{
+  transition-duration: .5s;
+  transform: scaleY(0);
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;}
+
+.state-remove-markers{
+  transform-origin: 50% 0; }
+.state-add-markers{
+  transform-origin: 50% 100%; }
+
+.state-remove-markers.remove-markers-active{
+  transform: scaleY(1); }
+
+.state-add-markers.add-markers-active{
+  transform: scaleY(1); }
+
+
+.default-pin {
+  width: 72px;
+  height: 72px;
+  border-radius: 50% 50% 50% 0;
+  background: #c30b82;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+}
+
+.default-pin::after {
+    content: '';
+    width: 64px;
+    height: 64px;
+    /*margin: -63px 0 0 4px;*/
+    margin: 4px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+ }
+
+
+
+.leaflet-control-search .search-button {
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+
+}
+
+.leaflet-popup-content-wrapper {
+    padding: 1px 1px 30px 1px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.leaflet-popup-content {
+    max-width: 600px;
+    height: 400px;
+    overflow-y: auto;
+
+}
+
+.leaflet-popup-tip {
+    background: red;
+}
+
+body {
+        padding: 0;
+        margin: 0;
+    }
+
+
+.sidetable {
+    width: 190px;
+    height: 430px;
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 8px 0;
+    z-index: 10;
+}
+
+.sidetext {
+    width: 160px;
+    position: absolute;
+      /*z-index: 5;*/
+    top: 14px;
+    left: 10px;
+    padding: 8px 0;
+    z-index: 10;
+}
+
+.sidetext tbody {
+    padding-top: 3px;
+    /*color: #2196F3;*/
+    color: #000;
+    z-index: 11;
+}
+
+.sidetext tbody tr td {
+    font-size: 10px;
+}
+
+.sidetext tbody tr td button{
+    font-size: 10px;
+}
+
+.main {
+    margin-left: 180px; /* Same width as the sidebar + left position in px */
+    padding: 0px 10px;
+}
+
+.main table td {
+    font-size: 10px;
+    vertical-align:center;
+    padding:15px 5px 5px 5px;
+}
+
+.main table th {
+    font-size: 10px;
+}
+
+.btn {
+    font-size: 10px;
+}
+
+.mainFooter {
+    position: fixed;
+    background: #fff;
+    width: 320px;
+    left: 0;
+    top: 0;
+    margin: 405px 0 0 210px;
+    padding: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+img.stretchy {
+    width: 100%; /*Tells image to fit to width of parent container*/
+    height: 100%;
+    object-fit:scale-down;
+
+}
+td.img-container {
+    width: 90%; /*Use this to control width of the parent container, hence the image*/
+    height: 155px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    width: 16%;
+    text-align: center;
+}
+
+.table th {
+   /* width: 16%;*/
+    text-align: center;
+}
+
+.btn-light:hover {
+    cursor:not-allowed !important;
+}
+
+/*legend*/
+.leaflet-legend-expanded .leaflet-legend-contents {
+    display: block;
+    padding: 1px 16px 10px 1px;
+}
+
+h3.leaflet-legend-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.custom-div-icon:hover {
+    filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(0.5);
+}
+
+
+.circle-available {
+      background: #006d2c;
+      border-radius: 50%;
+      box-shadow: 8px 8px 3px grey; /* see http://www.w3schools.com/css/css3_shadows.asp */
+      -moz-box-shadow: 8px 8px 3px grey;
+      -webkit-box-shadow: 8px 4px 8px grey;
+      transition: transform .5s ease;
+
+
+}
+
+.circle-available:hover {
+      background: #66c2a4;
+}
+
+.circle-sold {
+    background: #7f0000;
+    border-radius: 50%;
+    box-shadow: 8px 8px 3px grey; /* see http://www.w3schools.com/css/css3_shadows.asp */
+    -moz-box-shadow: 8px 8px 3px grey;
+    -webkit-box-shadow: 8px 4px 8px grey;
+    transition: transform .5s ease;
+
+}
+
+.circle-sold:hover {
+      background: #d7301f;
+}
+
+    /*search*/
+.leaflet-control-search .search-input {
+    display: block;
+    float: left;
+    background: #fff;
+    border: 1px solid #666;
+    border-radius: 2px;
+    height: 22px;
+    padding: 0 0 0 2px;
+    margin: 4px 0 4px 4px;
+    width: 160px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .leaflet-popup-content {
+        max-width: 150px;
+        height: 75px;
+        overflow-y: auto;
+
+    }
+}   
+
